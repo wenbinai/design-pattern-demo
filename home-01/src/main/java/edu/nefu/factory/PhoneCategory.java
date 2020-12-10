@@ -10,8 +10,11 @@ import edu.nefu.materiel.NFC;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 手机分类
+ */
 public class PhoneCategory extends AbstractPhone implements IMatetiel {
-    public Map<String, Matetiel> map = new HashMap<>();
+    private Map<String, Matetiel> map = new HashMap<>();
 
     private PhoneCategory() {
 

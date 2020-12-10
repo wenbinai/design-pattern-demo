@@ -17,12 +17,6 @@ public abstract class AbstractPhone {
     private Battery battery;
     private Screen screen;
 
-    // 额外的组件
-//    protected Map<String, Matetiel> exMap = new HashMap<>();
-
-    // 额外的部件(物料)
-//    public abstract AbstractPhone addMateriel(Map<String, Matetiel> materielMap);
-
     // 手机详细描述
     public abstract String desc();
 }
