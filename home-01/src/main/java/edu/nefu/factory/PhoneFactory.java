@@ -1,24 +1,25 @@
 package edu.nefu.factory;
 
 import edu.nefu.AbstractPhone;
-import edu.nefu.materiel.Camera;
-import edu.nefu.materiel.GPS;
-import edu.nefu.materiel.NFC;
 
 public class PhoneFactory {
     public AbstractPhone buildOldPhone() {
-        return new PhoneCategory("老年机");
+        PhoneCategory oldPhone = new PhoneCategory("老年机");
+        return oldPhone;
     }
 
     public AbstractPhone buildPhotoPhone() {
-        return new PhoneCategory("拍照手机")
-                .addCamera(new Camera());
+        PhoneCategory photoPhone = new PhoneCategory("拍照手机");
+        photoPhone.addMatetiel("camera", MatetielFactory.getMatetielFactory().buildCamera());
+        return photoPhone;
     }
 
     public AbstractPhone buildGoodPhone() {
-        return new PhoneCategory("旗舰手机")
-                .addNFC(new NFC())
-                .addGPS(new GPS())
-                .addCamera(new Camera());
+        PhoneCategory goodPhone = new PhoneCategory("旗舰手机");
+        goodPhone.addMatetiel("camera", MatetielFactory.getMatetielFactory().buildCamera())
+                .addMatetiel("GPS", MatetielFactory.getMatetielFactory().buildGPS())
+                .addMatetiel("NFC", MatetielFactory.getMatetielFactory().buildNFC());
+
+        return goodPhone;
     }
 }
