@@ -24,14 +24,17 @@ public class MatetielFactory {
 
 
     public Matetiel buildCamera() {
+        System.out.println("制造照相机");
         return new Camera();
     }
 
     public Matetiel buildNFC() {
+        System.out.println("制造NFC");
         return new NFC();
     }
 
     public Matetiel buildGPS() {
+        System.out.println("制造GPS");
         return new GPS();
     }
 

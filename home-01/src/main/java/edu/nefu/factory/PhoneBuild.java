@@ -2,7 +2,7 @@ package edu.nefu.factory;
 
 import edu.nefu.AbstractPhone;
 
-public class PhoneFactory {
+public class PhoneBuild {
     public AbstractPhone buildOldPhone() {
         PhoneCategory oldPhone = new PhoneCategory("老年机");
         return oldPhone;
